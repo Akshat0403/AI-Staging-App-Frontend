@@ -1,0 +1,7 @@
+{
+  "name": "AI Interior Staging",
+  "description": "A mobile-first AI tool that allows users to take a photo of an empty room, select a design style, and receive a realistic AI-generated image of the same space with complete interior design and furniture placement.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
