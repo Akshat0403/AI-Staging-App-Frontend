@@ -17,15 +17,18 @@ export const fileToBase64 = (
 export const generateStagedImage = async (imageFile: File, prompt: string) => {
   const { base64, mimeType } = await fileToBase64(imageFile);
 
-  const response = await fetch("http://localhost:3001/generate-image", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      base64,
-      mimeType,
-      prompt,
-    }),
-  });
+  const response = await fetch(
+    "https://aiappbackend-6.onrender.com/generate-image",
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        base64,
+        mimeType,
+        prompt,
+      }),
+    }
+  );
 
   const data = await response.json();
 
