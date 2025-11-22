@@ -33,7 +33,7 @@ export const generateStagedImage = async (imageFile: File, prompt: string) => {
   const data = await response.json();
 
   if (!response.ok) {
-    throw new Error(data.error || "Failed to generate image");
+    throw new Error(data.error || "Failed to generate images");
   }
 
   return data.image; // base64 image
